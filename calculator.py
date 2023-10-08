@@ -4,6 +4,7 @@ import tkinter as tk
 # creating main tkinter window/toplevel 
 root = tk.Tk()
 root.geometry("350x450")
+root.title("Python Calculator")
 
 main_window = tk.Frame(root)
 main_window.pack(fill=tk.BOTH, expand=True)
@@ -37,21 +38,21 @@ def update_screen(text):
 def compute(screen_text):
     screen_text.set(eval(screen_text))
 
-buttons = [{"row":0, "column":0, "text": "0"},
-           {"row":0, "column":1, "text": "1"},
-           {"row":0, "column":2, "text": "2"},
+buttons = [{"row":0, "column":0, "text": "7"},
+           {"row":0, "column":1, "text": "8"},
+           {"row":0, "column":2, "text": "9"},
            {"row":0, "column":3, "text": "+"},
-           {"row":1, "column":0, "text": "3"},
-           {"row":1, "column":1, "text": "4"},
-           {"row":1, "column":2, "text": "5"},
+           {"row":1, "column":0, "text": "4"},
+           {"row":1, "column":1, "text": "5"},
+           {"row":1, "column":2, "text": "6"},
            {"row":1, "column":3, "text": "-"},
-           {"row":2, "column":0, "text": "6"},    
-           {"row":2, "column":1, "text": "7"},     
-           {"row":2, "column":2, "text": "8"},    
+           {"row":2, "column":0, "text": "1"},    
+           {"row":2, "column":1, "text": "2"},     
+           {"row":2, "column":2, "text": "3"},    
            {"row":2, "column":3, "text": "*"},     
-           {"row":3, "column":0, "text": "9"},    
-           {"row":3, "column":1, "text": "/"},     
-           {"row":3, "column":2, "text": "c"},    
+           {"row":3, "column":0, "text": "c"},    
+           {"row":3, "column":1, "text": "0"},     
+           {"row":3, "column":2, "text": "/"},    
            {"row":3, "column":3, "text": "→"},         
            ]
 
