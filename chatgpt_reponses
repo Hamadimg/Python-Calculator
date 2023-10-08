@@ -1,0 +1,66 @@
+Basic Tkinter TK Items
+
+Label: It is used to display text or image on the screen.
+
+label = tk.Label(root, text="This is a label")
+
+Button: It is used to add buttons in your application.
+button = tk.Button(root, text="This is a button", command=your_function)
+
+Entry: It provides input fields to the user.
+entry = tk.Entry(root)
+
+
+Canvas: It is used to draw shapes in your application like lines, circle etc.
+canvas = tk.Canvas(root, width=100, height=100)
+canvas.create_line(0, 0, 100, 100)
+
+Check Button: They are used to select multiple options by the user.
+check_button = tk.Checkbutton(root, text="Check this box", variable=var)
+
+Radio Button: These buttons are used to select one option from multiple choices.
+radio_button = tk.Radiobutton(root, text='Option1', value=1)
+
+
+Menu Button: It is a part of top-down menu that stays on the window all the time.
+menu_button = tk.Menubutton(root, text="Menu")
+
+Scale: This widget provides a slider to the user.
+scale = tk.Scale(root)
+
+Text: Text widget is used to display multi-line text or to accept multiline text as input from the user.
+text = tk.Text(root)
+
+
+Ways to Place Objects in Tkinter
+
+Pack: This geometry manager organizes widgets in blocks before placing them in the parent widget.
+
+widget.pack()
+
+
+Grid: It organizes widgets in a table-like structure in the parent widget.
+widget.grid(row=row_num, column=column_num)
+
+Place: This geometry manager organizes widgets by placing them in a specific position in the parent widget.
+widget.place(x=x_position, y=y_position)
+
+
+
+In Tkinter, making elements responsive or scale according to window size is achieved by setting the sticky parameter and using a weight attribute on the grid system. Sticky parameter can be set to directions 'n', 's', 'e' and 'w'.
+
+Here's an example of usage:
+import tkinter as tk
+
+root = tk.Tk()
+frame = tk.Frame(root)
+frame.pack(fill=tk.BOTH, expand=1)
+
+button = tk.Button(frame, text="This is a button")
+button.grid(row=0, column=0, sticky="nsew")
+
+frame.rowconfigure(0, weight=1)
+frame.columnconfigure(0, weight=1)
+
+root.mainloop()
+
